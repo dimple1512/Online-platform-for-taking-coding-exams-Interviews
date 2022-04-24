@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title %}Coding{% endblock title %}
+
+{% block body %}
+  <style>
+    body{
+      background-color: rgb(26, 95, 97);
+    }
+    #script{
+      size: 50px;
+    }
+  </style>
+
+  <div class="row">
+
+    <div class="d-flex flex-column flex-shrink-0 p-4" style="width: 315px;height: 593px; background-color:LightGray;">
+      <span class="py-0 my-0"><h5><u>Programming</u> <|> <u>Question</u></h5></span>
+      <hr>
+      <span><strong>Choosed Question :</strong></span>
+      <span class="py-1"><strong>Write a program to Find sum multiplication and an average of two numbers</strong></span>
+      <hr>
+      <span><strong>Default test case - 1 :</strong></span>
+      <span><strong>input :</strong></span>
+      <span><strong>5</strong></span>
+
+      <hr>
+      <span><strong>Default test case - 2 :</strong></span>
+      <span><strong>Output :</strong></span>
+      <span><strong>5</strong></span>
+
+    </div>
+
+    <div class="col-sm-9 mx-2">
+
+      <div class="row">
+
+        <div class="col-sm-4"></div>
+
+        <div class="col-sm-2 p-1">
+
+          <span><b style="color:azure">Time Left --  </b><strong id="countdown" class="text-light text-justify-end"><h4></h4></strong></span>
+
+          <script>
+            const startingMinutes = 10;
+            let time = startingMinutes * 60
+            const countdownEl = document.getElementById('countdown');
+            setInterval(updateCountdown, 1000);
+            function updateCountdown() {
+              const minutes = Math.floor(time / 60);
+              let seconds = time % 60;
+              seconds = seconds < 10 ? '0' + seconds : seconds;
+              countdownEl.innerHTML =`${minutes}: ${seconds}`;
+              time--;
+            }
+          </script>
+        </div>
+
+        <div class="col-sm-3 px-5 my-1">
+
+          <select class="form-select" aria-label="Default select example">
+            <option selected>-Language-</option>
+            <option value="1">Python</option>
+          </select>
+
+        </div>
+
+        <form action="/h/run" method="post">
+          {% csrf_token %}
+          <div class="form-group row">
+            <div class="col-sm-8 mr-5 ml-3">
+              <textarea class="form-control" rows="16" id="codearea" name="codearea" style="border:1px solid grey; letter-spacing: 1px; font-family: 'Lucida Console'; font-size: 20px; " onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">{{code}}</textarea>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="row mb-4">
+                <label class="text" style="color: azure;"><b>Input :</b></label>
+                <textarea class="form-control" rows="8" id="inputarea" name="inputarea" style="border:1px solid grey;">{{input}}</textarea>
+              </div>
+              <div class="row">
+                <label class="text" style="color: azure;"><b>Output :</b></label>
+                <textarea class="form-control" rows="8" id="outputarea" name="outputarea" style="border:1px solid grey;" disabled>{{output}}</textarea>
+              </div>
+            </div>
+
+            <div class="form-group d-grid gap-3 mx-auto row mt-2">
+              <div class="col-sm-4 mx-3">
+                <button class="btn btn-warning float-right me-3" type="submit">complie</button>
+                <a class="btn btn-success" href="/codingsection_completed">submit</a>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+                       
+{% endblock body %}

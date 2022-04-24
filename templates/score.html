@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Score{% endblock title %}
+
+{% block body %}
+
+    <div class="container">
+
+        <div class=" mx-5 my-2">
+            <h3 class=""><b><u>Your Score</u></b></h3>
+        </div>
+
+        <div class="row py-1">
+
+            <div class="col mx-auto">
+
+                <div class="d-flex flex-column flex-shrink-0 p-3 bg-black text-black bg-opacity-25" style="width: 750px;height: 500px">
+                    <div class="row">
+                        <span class="col-sm-2 py-1 text-center"><strong>ID</strong></span>
+                        <span class="col-sm-3 py-1 text-center"><strong>Question's</strong></span>
+                        <span class="col-sm-3 py-1 text-center"><strong>Score</strong></span>
+                        <span class="col-sm-3 py-1 text-center"><strong>Language</strong></span>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <span class="col-sm-2 py-1 text-center"><strong>1</strong></span>
+                        <span class="col-sm-3 py-1 text-center"><strong>Write a program to Find sum multiplication and an average of two numbers</strong></span>
+                        <span class="col-sm-3 py-1 text-center"><strong>7/10</strong></span>
+                        <span class="col-sm-3 py-1 text-center"><strong>python</strong></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column flex-shrink-0 p-3 bg-black text-black bg-opacity-25" style="width: 330px;height: 200px">
+                <span class="py-0 my-0"><h5>Candidate-Details</h5></span>
+                <hr>
+                <span><strong>Username - {{user.username}}</strong></span>
+                <span><strong>Email Address  - {{user.email}}</strong></span>
+            </div>
+
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-black text-black bg-opacity-25 my-4" style="width: 330px;height: 112px">
+                <span class="py-0 my-0 text-center"><h5>Go to Interview Page</h5></span>
+                <a class="btn btn-primary mx-3" aria-current="page" href="/interview">Interview</a>
+            </div>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+    
+    
+                    
+{% endblock body %}

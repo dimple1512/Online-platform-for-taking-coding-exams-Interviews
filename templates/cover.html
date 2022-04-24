@@ -1,0 +1,126 @@
+<!Doctype html>
+<html lang="en" class="h-100">
+  {%load static%}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    {% include 'partials/bootcss.html' %}
+    
+    <title> {% block title %} {% endblock title %} | KING </title>
+
+  </head>
+  <body>
+
+    <style>
+
+    m{
+      color: rgba(209, 47, 47, 0.925);
+      text-shadow: 5px 5px 5px rgb(126, 0, 0);
+    }
+    g{
+      color: rgba(255, 255, 255, 0.925);
+    }
+    .img{
+      color: rgba(255, 255, 255, 0.925);
+    }
+    o{
+      color: rgb(0, 145, 7);
+    }
+    div.relative {
+                position: relative;
+                top: 180px;
+                left: 60px;
+                color: rgb(255, 255, 255);
+                text-shadow: 10px 10px 5px black;
+            }
+            t{
+                color: rgb(0, 145, 7);
+            }
+    </style>
+
+    <div class="card-img-overlay mx-auto py-0 px-0">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent my-0 py-1">
+
+          <a class="navbar-brand px-3" href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+              <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+            </svg>
+          <h1 class="" width="62px" height="61px"></span></a><h2><strong><m>EXAM<g><\></g>TEST</m></strong></h2></h1><span class="sr-only"></span></a>
+
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> 
+          </button>
+
+            <div class="collapse navbar-collapse px-2" id="navbarNav">
+
+              <div class="container-fluid mx-3 px-0">
+              </div>
+
+              <ul class="navbar-nav">
+
+                <li class="nav-item px-2" title='LOGIN'>
+                  <a class="nav-link active" href="/login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pen mx-3" viewBox="0 0 16 16">
+                      <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                    </svg><strong>LOGIN</strong>
+                  </a>
+                </li>
+
+                <li class="nav-item active px-2" title='REGISTER'>
+                  <a class="nav-link active" href="/register">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-plus mx-3" viewBox="0 0 16 16">
+                      <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                      <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg><strong>REGISTER</strong>
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+            
+      </nav>
+
+        <div class="relative col-sm-7 mx-auto my-4">
+
+                <div class="col-sm g-2 align-items-center">
+                
+                    <div class="container pt-3">
+                        <h3><b>" Always remember that you are absolutely unique "</b></h3>
+                    </div>
+
+                    <div class="container mt-4">
+                        <h5><b>Just Believe In Yourself...!</b></h5>
+                        <h5 class="mt-3"><strong>__<o>__ Just like everyone else __</o>__</strong></h5>
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+    
+    <img src="/static/l.jpg" class="d-block" width="100%" height="640px" alt="y.jpg">
+
+    {% block body %} {% endblock body %}
+
+    {% include 'partials/bootjs.html' %}
+
+  </body>
+</html>

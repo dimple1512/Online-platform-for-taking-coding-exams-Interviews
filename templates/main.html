@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<body>
+    <style>
+        .video-grid-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            background-color: black;
+        }
+        .main-grid-container{
+            display: grid;
+            grid-template-columns: 60% 20%;
+        }
+        video{
+            border-radius: 25%;
+            background-color: black;
+        }
+    </style>
+    <h3 id="username">USERNAME</h3>
+    <div>
+        <input id="username"><button id="btn-join">Join Room</button>
+    </div>
+    <div class="main-grid-container">
+        <div id="video-container">
+            <div><video id="local-video" style="float: left;" autoplay playinline></video></div>
+            <button id="btn-toggle-audio">Audio Mute</button>
+            <button id="btn-toggle-audio">Video Off</button>
+        </div>
+        <div id="chat">
+            <h3>CHAT</h3>
+            <div id="messages">
+                <ul id="message-list"></ul>
+            </div>
+        </div>
+        <div>
+            <input><button id="btn-send-msg">Send Message</button>
+            <button id="btn-share-screen">Share Screen</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
